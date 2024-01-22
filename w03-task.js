@@ -18,14 +18,14 @@ document.querySelector('#addNumbers').addEventListener('click', addNumbers);
 
 /* Function Expression - Subtract Numbers */
 
-let subtract = function(subtract1, subtract2){
-    return subtract1 - subtract2;
+let subtract = function(number1, number2){
+    return number1 - number2;
 }
 
 let subtractNumbers = function(){
-    let sub1 = Number(document.querySelector('#subtract1').value);
-    let sub2 = Number(document.querySelector('#subtract2').value);
-    let difference = subtract(sub1, sub2);
+    let num1 = Number(document.querySelector('#subtract1').value);
+    let num2 = Number(document.querySelector('#subtract2').value);
+    let difference = subtract(num1, num2);
 
     document.querySelector('#difference').value = difference;
 }
@@ -34,12 +34,12 @@ document.querySelector('#subtractNumbers').addEventListener('click', subtractNum
 
 /* Arrow Function - Multiply Numbers */
  
-let multiply = (factor1, factor2) => factor1 * factor2;
+let multiply = (number1, number2) => number1 * number2;
 
 let multiplyNumbers = () => {
-    let factor1 = Number(document.querySelector("#factor1").value);
-    let factor2 = Number(document.querySelector('#factor2').value);
-    let product = multiply(factor1, factor2);
+    let num1 = Number(document.querySelector("#factor1").value);
+    let num2 = Number(document.querySelector('#factor2').value);
+    let product = multiply(num1, num2);
 
     document.querySelector('#product').value = product;
 }
