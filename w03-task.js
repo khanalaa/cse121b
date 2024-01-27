@@ -2,22 +2,20 @@
 
 /* FUNCTIONS */
 /* Function Definition - Add Numbers */
-
-function add(number1, number2){
-    return number1 + number2;
+function add(add1, add2){
+    return add1 + add2;
 }
 
 function addNumbers(){
-    let number1 = Number(document.querySelector('#add1').value);
-    let number2 = Number(document.querySelector('#add2').value);
+    let add1 = Number(document.querySelector('#add1').value);
+    let add2 = Number(document.querySelector('#add2').value);
 
-    document.querySelector('#sum').value = add(number1, number2);
+    document.querySelector('#sum').value = add(add1, add2);
 }
 
-document.querySelector('#addNumbers').addEventListener('click', addNumbers);
+document.querySelector('#addNumbers').addEventListener("click", addNumbers);
 
 /* Function Expression - Subtract Numbers */
-
 let subtract = function(subtract1, subtract2){
     return subtract1 - subtract2;
 }
@@ -30,10 +28,9 @@ let subtractNumbers = function(){
     document.querySelector('#difference').value = difference;
 }
 
-document.querySelector('#subtractNumbers').addEventListener('click', subtractNumbers);
+document.querySelector('#subtractNumbers').addEventListener("click", subtractNumbers);
 
 /* Arrow Function - Multiply Numbers */
- 
 let multiply = (factor1, factor2) => factor1 * factor2;
 
 let multiplyNumbers = () => {
@@ -44,10 +41,10 @@ let multiplyNumbers = () => {
     document.querySelector('#product').value = product;
 }
 
-document.querySelector('#multiplyNumbers').addEventListener('click', multiplyNumbers);
+document.querySelector('#multiplyNumbers').addEventListener("click", multiplyNumbers);
 
 /* Open Function Use - Divide Numbers */
- 
+
 function divide(dividend, divisor){
     return dividend/divisor;
 }
@@ -60,43 +57,42 @@ let divideNumbers = () => {
     document.querySelector('#quotient').value = quotient;
 }
 
-document.querySelector('#divideNumbers').addEventListener('click', divideNumbers);
-
+document.querySelector('#divideNumbers').addEventListener("click", divideNumbers);
 /* Decision Structure */
+function calculateTotalDue() {
 
-let date = new Date();
-let currentYear = date.getFullYear();
+    let subtotal = Number(document.querySelector('#subtotal').value);
+    let isMember = document.querySelector('#member').checked;
+    let discount = isMember ? 0.2 : 0;
+    let totalDue = subtotal * (1 - discount);
 
-document.querySelector('#year').textContent = currentYear;
+    document.querySelector('#total').textContent = `Total: $${totalDue.toFixed(2)}`;
+}
 
+// Add event listener for the "Get Total Due" button
+document.querySelector('#getTotal').addEventListener('click', calculateTotalDue);
 
 /* ARRAY METHODS - Functional Programming */
 /* Output Source Array */
-
 let numArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 document.getElementById('array').textContent = numArray;
 
 /* Output Odds Only Array */
-
 let odd = numArray.filter(num => num % 2 === 1);
 document.querySelector('#odds').textContent = odd;
 
 /* Output Evens Only Array */
-
 let even = numArray.filter(num => num % 2 === 0);
 document.querySelector('#evens').textContent = even;
 
 /* Output Sum of Org. Array */
-
 let sumNum = numArray.reduce((sum, number) => sum+number);
 document.querySelector('#sumOfArray').textContent = sumNum;
 
 /* Output Multiplied by 2 Array */
-
 let multiplyNum = numArray.map((num)  => num * 2);
 document.querySelector('#multiplied').textContent = multiplyNum;
 
 /* Output Sum of Multiplied by 2 Array */
-
 let sumofMultiplied = multiplyNum.reduce((sum, num) => sum + num);
 document.querySelector('#sumOfMultiplied').textContent = sumofMultiplied;
