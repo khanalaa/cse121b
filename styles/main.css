@@ -279,6 +279,85 @@ footer {
     margin: .5rem;
 }
 
+.quote-box{
+    background: #fff;
+    width: 700px;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,50%);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 20px 0px;
+    font-family: "Shadows Into Light", sans-serif ;
+    font-size: 25px;
+}
+
+.quote-box h2{
+    font-size: 32px;
+    margin-bottom: 30px;
+    position: relative;
+    font-family: "Lobster", sans-serif ;
+}
+
+.quote-box h2::after{
+    content: '';
+    width: 100px;
+    height: 3px;
+    background: #bbc6fa;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translate(-50%);
+}
+
+.quote-box blockquote::before, .quote-box blockquote::after{
+    content: '"';
+} 
+
+.quote-box span{
+    display: block;
+    margin-top: 10px;
+    float: right;
+    position: relative;
+}
+
+.quote-box span::before{
+    content: '';
+    width: 20px;
+    height: 2px;
+    background: #bbc6fa;
+    position: absolute;
+    top: 50%;
+    left: -30px;
+}
+
+.quote-box div{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.quote-box button{
+    background: #bbc6fa;
+    color: navy;
+    border-radius: 27px;
+    border: 1px solid #111;
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    cursor: pointer;
+    font-family: "Shadows Into Light", sans-serif ;
+    font-size: 20px;
+}
+
+#author{
+    font-size: 22px;
+}
 /* Media Queries */
 @media only screen and (min-width: 32.5em) {
     nav ul {
