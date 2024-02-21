@@ -26,6 +26,7 @@ imageElement.setAttribute('alt', `${fullName}`);
 /* Step 5 - Array */
 
 let favoriteFoods = ['Pizza', 'Sushi', 'Chocolate', 'Burgers', 'PaneerTikka', 'PaniPuri'];
+foodElement.innerHTML += `<br>${favoriteFoods}`;
 const singleFavoriteFood = 'Ice Cream';
 favoriteFoods.push(singleFavoriteFood);
 
