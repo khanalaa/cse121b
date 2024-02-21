@@ -34,10 +34,10 @@ const reset = () => {
 }
 
 /* filterTemples Function */
-const sortBy = (temples) => {
+const filterTemples = (temples) => {
     reset(); // Clear the displayed list of temples
 
-    const filter = document.querySelector('#sortBy').value; // Get the selected value
+    const filter = document.querySelector('#filtered').value; // Get the selected value
 
     switch (filter) {
         case "utah":
@@ -56,6 +56,7 @@ const sortBy = (temples) => {
 }
 
 /* Event Listener */
-document.querySelector('#sortBy').addEventListener("change", () => {
-    sortBy(templeList);
+document.querySelector('#filtered').addEventListener("change", () => {
+    filterTemples(templeList);
 });
+
